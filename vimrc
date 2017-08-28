@@ -446,7 +446,3 @@ set cursorline
 set noundofile				" under windows
 map <C-Left> <Esc>:tabp<CR>
 map <C-Right> <Esc>:tabn<CR>
-
-" set fileformat=unix
-" set ff=unix
-set nobackup
