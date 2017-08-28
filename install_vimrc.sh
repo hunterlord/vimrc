@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-cat ~/.vim_runtime_hunter/vimrc ~/.vimrc
+cp ~/.vim_runtime_hunter/vimrc ~/.vimrc
 
 echo "Install vundle"
 
