@@ -411,12 +411,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " 只格式化js文件
 " let g:neoformat_verbose = 1 " only affects the verbosity of Neoformat
 " let &verbose            = 1 " also increases verbosity of the editor as a whole
-let g:neoformat_enable_html = ['js-beautify']
+let g:neoformat_enable_css = ['js-beautify']
 let g:neoformat_enable_javascript = ['prettier']
 let g:neoformat_enable_typescript = ['tsfmt']
 autocmd FileType javascript setlocal formatprg=prettier\ --stdin\ --single-quote\ es5
 autocmd FileType typescript setlocal formatprg=tsfmt\ --stdin\ --useTslint\ tslint.json
-autocmd FileType html setlocal formatprg=js-beautify\ --stdin\ --html
+" autocmd FileType html setlocal formatprg=js-beautify\ --stdin\ --html
 autocmd FileType css setlocal formatprg=js-beautify\ --stdin\ --css
 let g:neoformat_try_formatprg = 1
 let g:neoformat_only_msg_on_error = 1
@@ -426,7 +426,8 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 augroup fmt
   autocmd!
   autocmd BufWritePre *.ts,*.css,*.html,*.js undojoin | Neoformat
-  autocmd BufWritePre *.ts silent! %s///g|''
+  " autocmd BufWritePre *.ts silent! %s///g|''
+  autocmd BufWritePre *.html :normal gg=G|''
 augroup END
 
 
