@@ -1,5 +1,13 @@
 ### install
 
+> prepare
+
+```
+// ubuntu 
+sudo apt-get install zsh curl vim tmux
+sudo yum install zsh curl vim tmux
+```
+
 > vim  
 
 ```
