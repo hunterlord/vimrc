@@ -1,0 +1,29 @@
+set -g default-terminal 'screen-256color'                                 
+set -g prefix2 C-s                                                                                                                                         
+bind-key -r C-h select-window -t :-                                                                                                                          
+bind-key -r C-l select-window -t :+                                                                                                                          
+bind h select-pane -L                                                                                                                                        
+bind j select-pane -D                                                                                                                                        
+bind k select-pane -U                                                                                                                                        
+bind l select-pane -R                                                                                                                                        
+setw -g mode-keys vi                                                                                                                                         
+set -g base-index 1                                                                                                                                          
+set-window-option -g pane-base-index 1                                                                                                                       
+                                                                                                                                                             
+set -g renumber-windows on                                                                                                                                   
+                                                                                                                                                             
+set -g status-bg '#666666'                                                                                                                                   
+set -g status-fg '#aaaaaa'                                                                                                                                   
+                                                                                                                                                             
+set -g history-limit 10000                                                                                                                                   
+                                                                                                                                                             
+bind-key C-b send-prefix                                                                                                                                     
+bind-key C-s send-prefix -2                                                                                                                                  
+unbind-key C-z                                                                                                                                               
+                                                                                                                                                             
+if-shell "[ -f ~/.tmux.conf.local ]" 'source ~/.tmux.conf.local'                                                                                             
+                                                                                                                     
+bind -r H resize-pane -L 2                                                                                        
+bind -r J resize-pane -D 2                                                                                        
+bind -r K resize-pane -U 2                                                                                        
+bind -r L resize-pane -R 2
