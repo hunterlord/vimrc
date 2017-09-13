@@ -5,6 +5,8 @@
 ```
 // ubuntu 
 sudo apt-get install zsh curl vim tmux
+
+// centos 
 sudo yum install zsh curl vim tmux
 ```
 
