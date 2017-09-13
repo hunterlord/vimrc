@@ -1,5 +1,5 @@
 set -g default-terminal 'screen-256color'                                 
-set -g prefix2 C-s                                                                                                                                         
+set -g prefix2 C-a                                                                                                                                         
 bind-key -r C-h select-window -t :-                                                                                                                          
 bind-key -r C-l select-window -t :+                                                                                                                          
 bind h select-pane -L                                                                                                                                        

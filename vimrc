@@ -416,7 +416,6 @@ let g:neoformat_enable_javascript = ['prettier']
 let g:neoformat_enable_typescript = ['tsfmt']
 autocmd FileType javascript setlocal formatprg=prettier\ --stdin\ --single-quote\ es5
 autocmd FileType typescript setlocal formatprg=tsfmt\ --stdin\ --useTslint\ tslint.json
-" autocmd FileType html setlocal formatprg=js-beautify\ --stdin\ --html
 autocmd FileType css setlocal formatprg=js-beautify\ --stdin\ --css
 let g:neoformat_try_formatprg = 1
 let g:neoformat_only_msg_on_error = 1
@@ -425,9 +424,9 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 
 augroup fmt
   autocmd!
-  autocmd BufWritePre *.ts,*.css,*.html,*.js undojoin | Neoformat
+  autocmd BufWritePre *.ts,*.css,*.js undojoin | Neoformat
   " autocmd BufWritePre *.ts silent! %s///g|''
-  autocmd BufWritePre *.html :normal gg=G|''
+  autocmd BufWritePre *.html :normal migg=G`i
 augroup END
 
 
