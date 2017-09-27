@@ -427,6 +427,7 @@ augroup fmt
   autocmd BufWritePre *.ts,*.css,*.js undojoin | Neoformat
   " autocmd BufWritePre *.ts silent! %s///g|''
   autocmd BufWritePre *.html :normal migg=G`i
+  autocmd BufWritePre *.json execute "silent! :normal mi\r:%!python -m json.tool\r`i"
 augroup END
 
 
@@ -446,3 +447,4 @@ set cursorline
 set noundofile				" under windows
 map <C-Left> <Esc>:tabp<CR>
 map <C-Right> <Esc>:tabn<CR>
+map <F3> :nohlsearch<CR>
