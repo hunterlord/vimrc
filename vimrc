@@ -63,7 +63,7 @@ nmap <leader>w :w!<cr>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
-command W w !sudo tee % > /dev/null
+command! W w !sudo tee % > /dev/null
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -425,15 +425,15 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 augroup fmt
   autocmd!
   autocmd BufWritePre *.ts,*.css,*.js undojoin | Neoformat
-  " autocmd BufWritePre *.ts silent! %s///g|''
+  autocmd BufWritePre *.ts   execute "silent! :normal mi\r:%s/\\r//g\r`i"
   autocmd BufWritePre *.html :normal migg=G`i
   autocmd BufWritePre *.json execute "silent! :normal mi\r:%!python -m json.tool\r`i"
 augroup END
 
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1

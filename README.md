@@ -50,3 +50,7 @@ sh  ~/.vim_runtime_hunter/install_zsh.sh
 ```
 sh  ~/.vim_runtime_hunter/install_all.sh
 ```
+
+### update
+
+* 2017/10/02 auto remove  with *.ts 
