@@ -395,9 +395,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'HerringtonDarkholme/yats.vim'
-" Plugin 'fholgado/minibufexpl.vim'
-" javascript && nodejs syntastic check
-" Plugin 'vim-syntastic/syntastic'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 " 代码格式化
 Plugin 'sbdchd/neoformat'
   
@@ -431,14 +430,12 @@ augroup fmt
 augroup END
 
 
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:jsx_ext_required = 0
+
 endif
   
 set nu
