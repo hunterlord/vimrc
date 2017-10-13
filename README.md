@@ -20,7 +20,7 @@ sh ~/.vim_runtime_hunter/install_vimrc.sh
 > typescript, js autoformat
 
 ```
-npm i -g prettier tsfmt js-beautify
+npm i -g prettier typescript-formatter js-beautify
 
 // typescript format by tslint
 cd ~/your project/
@@ -53,4 +53,5 @@ sh  ~/.vim_runtime_hunter/install_all.sh
 
 ### update
 
-* 2017/10/02 auto remove  with *.ts 
+* 2017/10/02 auto remove 
+ with *.ts 
