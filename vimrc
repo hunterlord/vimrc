@@ -412,9 +412,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " let &verbose            = 1 " also increases verbosity of the editor as a whole
 let g:neoformat_enable_css = ['js-beautify']
 let g:neoformat_enable_javascript = ['prettier']
-let g:neoformat_enable_typescript = ['tsfmt']
+let g:neoformat_enable_typescript = ['prettier']
 autocmd FileType javascript setlocal formatprg=prettier\ --stdin\ --single-quote\ es5
-autocmd FileType typescript setlocal formatprg=tsfmt\ --stdin\ --useTslint\ tslint.json
+autocmd FileType typescript setlocal formatprg=prettier\ --stdin\ --single-quote\ es5\ --parser typescript
 autocmd FileType css setlocal formatprg=js-beautify\ --stdin\ --css
 let g:neoformat_try_formatprg = 1
 let g:neoformat_only_msg_on_error = 1
