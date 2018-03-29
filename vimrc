@@ -445,3 +445,5 @@ set noundofile				" under windows
 map <C-Left> <Esc>:tabp<CR>
 map <C-Right> <Esc>:tabn<CR>
 map <F3> :nohlsearch<CR>
+map <F7> <c-w>>
+map <F8> <c-w><
