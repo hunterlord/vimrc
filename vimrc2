@@ -418,6 +418,8 @@ map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " 只格式化js文件
 
+" npm i -g eslint-config-prettier eslint-plugin-prettier eslint eslint-plugin-react@latest
+
 augroup fmt
   autocmd!
   autocmd BufWritePre *.js undojoin | Autoformat
